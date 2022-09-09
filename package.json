@@ -50,7 +50,9 @@
   "bugs": {
     "url": "https://github.com/tomchen/example-typescript-package/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
