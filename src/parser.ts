@@ -1,9 +1,10 @@
 import Menus from './interfaces/menus'
+import Row from './interfaces/row'
 
 export default class Parser {
-  private rawData: Record<any, string>[]
+  private rawData: Row[]
 
-  constructor(rawData: Record<any, string>[]) {
+  constructor(rawData: Row[]) {
     this.rawData = rawData
   }
 

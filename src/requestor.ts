@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from 'axios'
+import Row from './interfaces/row'
 
 export default class Requestor {
   private httpRequestor: AxiosInstance
@@ -13,9 +14,7 @@ export default class Requestor {
     })
   }
 
-  public async getRawDataOfAllMenu(
-    armyNum: number
-  ): Promise<Record<any, string>[]> {
+  public async getRawDataOfAllMenu(armyNum: number): Promise<Row[]> {
     try {
       const numberOfRows = await this.getNumberOfRows(armyNum)
       const result = await this.httpRequestor.get(
@@ -26,7 +25,6 @@ export default class Requestor {
       console.error(error)
       throw new Error('Failed to load menus')
     }
-    return []
   }
 
   private async getNumberOfRows(armyNum: number): Promise<number> {
@@ -39,7 +37,6 @@ export default class Requestor {
       console.error(error)
       throw new Error('Failed to load menus')
     }
-    return 0
   }
 
   private apiRoute(armyNum: number, from: number, to: number): string {

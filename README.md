@@ -5,6 +5,9 @@
 ```typescript
 import { ArmyMeal } from 'army-meal';
 
+// commonjs
+const { ArmyMeal } = require('army-meal')
+
 async function request() {
   const meal = new ArmyMeal(
     [API KEY]
