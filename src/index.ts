@@ -1,3 +1,4 @@
-import { Num } from './Num'
+import ArmyMeal from './meal'
+import Menus from './interfaces/menus'
 
-export { Num }
+export { ArmyMeal, Menus }
