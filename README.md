@@ -1,3 +1,5 @@
+# Army-meal 국방부 급식 API 모듈
+
 ## 사용법
 
 ```typescript
@@ -14,11 +16,11 @@ async function request() {
 request()
 ```
 
-###getMenusOfDay(numberOfLSG, year, month, day)
+### getMenusOfDay(numberOfLSG, year, month, day)
 
 numberOfLSG번 부대의 year년 month월 day일 메뉴를 반환합니다.
 
-numberOfLSG - 군수지원단(급양대)의 부대 번호
-year - 연도
-month - 월
-day - 일 
+numberOfLSG - 급양대의 부대 번호 ex) 육군훈련소: 9547 <br>
+year - 연도 <br>
+month - 월 <br>
+day - 일 <br>

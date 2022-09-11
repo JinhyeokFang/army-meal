@@ -24,6 +24,7 @@ export default class Requestor {
       return result.data['DS_TB_MNDT_DATEBYMLSVC_' + armyNum].row
     } catch (error) {
       console.error(error)
+      throw new Error('Failed to load menus')
     }
     return []
   }
@@ -36,6 +37,7 @@ export default class Requestor {
       )
     } catch (error) {
       console.error(error)
+      throw new Error('Failed to load menus')
     }
     return 0
   }
