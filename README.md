@@ -1,4 +1,6 @@
 # Army-meal 국방부 급식 API 모듈
+이 모듈은 https://openapi.mnd.go.kr의 급식 api를 더욱 편하게 사용할 수 있도록 하는 모듈입니다.
+api key와 부대 번호, 메뉴를 알고 싶은 날짜만 입력하면 급식 메뉴를 간편하게 구할 수 있습니다.
 
 ## 사용법
 
@@ -27,3 +29,6 @@ numberOfLSG - 급양대의 부대 번호 ex) 육군훈련소: 9547 <br>
 year - 연도 <br>
 month - 월 <br>
 day - 일 <br>
+
+## Dependency
+axios: API 서버로 급식 메뉴를 요청하기 위해 사용하는 http client입니다.
