@@ -8,6 +8,17 @@ export default class Parser {
     this.rawData = rawData
   }
 
+  public getMenusOfMonth(year: number, month: number): Menus[] {
+    const result: Menus[] = []
+    for (let i = 1; i <= 31; i++) {
+      const menus = this.getMenusOfDay(year, month, i)
+      if (menus.breakfast == [] && menus.lunch == [] && menus.dinner == [])
+        continue
+      result.push(menus)
+    }
+    return result
+  }
+
   public getMenusOfDay(year: number, month: number, day: number): Menus {
     const rawDataOfMenu = this.getRowsOfDay(year, month, day)
     const menus: Menus = {

@@ -17,6 +17,7 @@ async function request() {
   )
 
   console.dir(await meal.getMenusOfDay(9030, 2022, 9, 12))
+  console.dir(await meal.getMenusOfMonth(9030, 2022, 9))
 }
 
 request()
@@ -30,6 +31,8 @@ numberOfLSG - 급양대의 부대 번호 ex) 육군훈련소: 9547 <br>
 year - 연도 <br>
 month - 월 <br>
 day - 일 <br>
+
+### getMenusOfMonth(numberOfLSG, year, month)
 
 ## Dependency
 axios: API 서버로 급식 메뉴를 요청하기 위해 사용하는 http client입니다.

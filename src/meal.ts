@@ -22,4 +22,15 @@ export default class ArmyMeal {
     const parser = new Parser(rawData)
     return parser.getMenusOfDay(year, month, day)
   }
+
+  public async getMenusOfMonth(
+    numOfLSG: number,
+    year: number,
+    month: number
+  ): Promise<Menus[]> {
+    const requestor = new Requestor(this.apiKey, this.host)
+    const rawData = await requestor.getRawDataOfAllMenu(numOfLSG)
+    const parser = new Parser(rawData)
+    return parser.getMenusOfMonth(year, month)
+  }
 }
